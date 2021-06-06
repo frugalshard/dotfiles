@@ -1,28 +1,11 @@
-# Created by newuser for 5.8
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# zsh-completions
-autoload -Uz compinit promptinit
-compinit
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-# You don't want to be commit to the wrong branch
-function git_branch_name()
-{
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    echo '- ('$branch')'
-  fi
-}
-
-# Untracked? Added? Modified?
-#
-
-# Enable substitution in the prompt.
-setopt prompt_subst
-
-# Config for prompt. PS1 synonym.
-# prompt='%2/ $(git_branch_name) > '
-export PROMPT='%B%(?..[%?] )%b%n@%U%m%u> '
-export RPROMPT="$(git_branch_name)%F{${1:-green}}%~%f $(git_branch_name)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
