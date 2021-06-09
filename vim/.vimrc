@@ -37,7 +37,24 @@ let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
 map <C-p> :FZF <Enter>
 
 " Coc Configuration
-let g:coc_global_extensions = ['coc-clangd', 'coc-cmake']
+let g:coc_global_extensions = [
+            \ 'coc-clangd', 
+            \ 'coc-cmake', 
+            \ 'coc-clang-format-style-options',
+            \ 'coc-gist',
+            \ 'coc-git',
+            \ 'coc-json',
+            \ 'coc-markdownlint',
+            \ 'coc-pyright',
+            \ 'coc-pydocstring',
+            \ 'coc-rust-analyzer',
+            \ 'coc-sh',
+            \ 'coc-snippets',
+            \ 'coc-toml',
+            \ 'coc-vimlsp',
+            \ 'coc-xml',
+            \ 'coc-yaml',
+            \ ]
 
 set cmdheight=2
 set updatetime=300
