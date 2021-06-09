@@ -63,9 +63,9 @@ set signcolumn=number
 
 "" Use tab for completion, shift-tab to go back
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+      \pumvisible() ? "\<C-n>" :
+      \<SID>check_back_space() ? "\<TAB>" :
+      \coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 "" Ctrl-Space to trigger completion
