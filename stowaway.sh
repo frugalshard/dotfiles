@@ -4,3 +4,5 @@ stow zsh
 stow alacritty
 stow fonts
 stow vim
+stow polybar
+

@@ -12,4 +12,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # fzf stuff
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Ignore .git but search for hidden files too
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 
